@@ -1,0 +1,65 @@
+$pg-width: 100%;
+$col-number: 12;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 576px;
+/* Start global section */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/* End global section */
+
+/* Start responsive section */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @for $i from 1 to $col-number + 1 {
+    .col-#{$i} {
+      width: calc(($pg-width / $col-number) * $i);
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    .row {
+      flex-wrap: wrap;
+    }
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+}
+@for $l from 0 to 11 {
+  .gap-#{$l} {
+    gap: $l * 10px;
+  }
+}
+/* End responsive section */
+
+/* Start flex section */
+.d-flex {
+  display: flex;
+}
+.d-wrap {
+  flex-wrap: wrap;
+}
+.d-center {
+  justify-content: center;
+  align-items: center;
+}
+.d-left {
+  justify-content: start;
+  align-items: center;
+}
+.d-right {
+  justify-content: end;
+  align-items: center;
+}
+/* End flex section */
+
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}

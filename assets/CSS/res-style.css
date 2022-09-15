@@ -1,0 +1,139 @@
+/* Start global section */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* End global section */
+/* Start responsive section */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.row .col-1 {
+  width: 8.3333333333%;
+}
+.row .col-2 {
+  width: 16.6666666667%;
+}
+.row .col-3 {
+  width: 25%;
+}
+.row .col-4 {
+  width: 33.3333333333%;
+}
+.row .col-5 {
+  width: 41.6666666667%;
+}
+.row .col-6 {
+  width: 50%;
+}
+.row .col-7 {
+  width: 58.3333333333%;
+}
+.row .col-8 {
+  width: 66.6666666667%;
+}
+.row .col-9 {
+  width: 75%;
+}
+.row .col-10 {
+  width: 83.3333333333%;
+}
+.row .col-11 {
+  width: 91.6666666667%;
+}
+.row .col-12 {
+  width: 100%;
+}
+@media only screen and (max-width: 960px) {
+  .row {
+    /* For mobile phones: */
+  }
+  .row .row {
+    flex-wrap: wrap;
+  }
+  .row [class*=col-] {
+    width: 100%;
+  }
+}
+
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.gap-2 {
+  gap: 20px;
+}
+
+.gap-3 {
+  gap: 30px;
+}
+
+.gap-4 {
+  gap: 40px;
+}
+
+.gap-5 {
+  gap: 50px;
+}
+
+.gap-6 {
+  gap: 60px;
+}
+
+.gap-7 {
+  gap: 70px;
+}
+
+.gap-8 {
+  gap: 80px;
+}
+
+.gap-9 {
+  gap: 90px;
+}
+
+.gap-10 {
+  gap: 100px;
+}
+
+/* End responsive section */
+/* Start flex section */
+.d-flex {
+  display: flex;
+}
+
+.d-wrap {
+  flex-wrap: wrap;
+}
+
+.d-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.d-left {
+  justify-content: start;
+  align-items: center;
+}
+
+.d-right {
+  justify-content: end;
+  align-items: center;
+}
+
+/* End flex section */
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*# sourceMappingURL=res-style.css.map */

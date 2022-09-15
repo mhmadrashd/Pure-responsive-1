@@ -1,0 +1,155 @@
+$shadow-color: rgb(211, 211, 211);
+$font-color: rgb(152, 152, 152);
+$radius-val: 10px;
+$font-size-body: 1.3rem;
+$font-size-head: 3rem;
+$font-size-medium: 1.5rem;
+$margin: 2rem;
+$font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$breakpoint-tablet: 960px;
+$breakpoint-mobile: 576px;
+
+@mixin back-img {
+  background-size: cover;
+  background-position: center;
+}
+@mixin txt-head {
+  color: white;
+  font-family: $font-family;
+  font-size: 2rem;
+  margin: 50px 0px 0px 20px;
+  @media only screen and (max-width: $breakpoint-tablet) {
+    width: 80%;
+  }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+}
+
+/* Start navbar style */
+header {
+  border-bottom: 1px solid $shadow-color;
+  border-radius: $radius-val;
+  box-shadow: 3px 3px 3px $shadow-color;
+  overflow: hidden;
+  nav {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      line-height: 2.5;
+      font-size: $font-size-medium;
+      li {
+        color: $font-color;
+      }
+      li:hover {
+        cursor: pointer;
+        color: black;
+      }
+      .active {
+        color: black;
+      }
+    }
+  }
+}
+/* End navbar style */
+
+/* Start Head title section */
+.main {
+  padding: 2% 0;
+  h1 {
+    padding-bottom: 10px;
+    font-size: $font-size-head;
+    font-weight: bold;
+    font-family: $font-family;
+  }
+  .text {
+    width: 40%;
+    min-width: 300px;
+    color: rgb(105, 104, 104);
+    font-size: $font-size-body;
+  }
+}
+/* End Head title section */
+
+/* Start body section */
+.lg-cont {
+  border-radius: $radius-val;
+  position: relative;
+}
+.square-cont {
+  height: 500px;
+  background-color: aqua;
+  border-radius: $radius-val;
+  position: relative;
+  .headerTxt {
+    @include txt-head;
+    width: 60%;
+  }
+}
+.rect-cont {
+  height: 300px;
+  background-color: aqua;
+  border-radius: $radius-val;
+  .headerTxt {
+    @include txt-head;
+    width: 40%;
+  }
+}
+.mt {
+  margin-top: $margin;
+}
+.mb {
+  margin-bottom: $margin;
+}
+.coffee {
+  background-image: url(../images/Coffee.jpg);
+  @include back-img;
+}
+.plants {
+  background-image: url(../images/Plants.jpg);
+  @include back-img;
+}
+.sugar {
+  background-image: url(../images/Sugar.jpg);
+  @include back-img;
+}
+.nasa {
+  background-image: url(../images/nasa.jpg);
+  @include back-img;
+}
+.sands {
+  background-image: url(../images/sands.jpg);
+  @include back-img;
+}
+.shoot {
+  background-image: url(../images/shoot.jpg);
+  @include back-img;
+}
+button {
+  padding: 0.6rem 1rem;
+  font-size: $font-size-body;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  box-shadow: 0px 0px 5px 2px $shadow-color;
+  border: 1px solid white;
+  background-color: white;
+  cursor: pointer;
+  color: rgb(140, 71, 6);
+  @media only screen and (max-width: $breakpoint-mobile) {
+    font-size: 15px;
+  }
+}
+.end {
+  margin-bottom: 3%;
+  @media only screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 10%;
+  }
+}
+/* End body section */

@@ -40,7 +40,6 @@ header {
     ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
       line-height: 2.5;
       font-size: $font-size-medium;
@@ -53,6 +52,13 @@ header {
       }
       .active {
         color: black;
+      }
+      @media only screen and (max-width: $breakpoint-tablet) {
+        font-size: 17px;
+        gap: 30px !important;
+      }
+      @media only screen and (max-width: $breakpoint-mobile) {
+        display: none;
       }
     }
   }

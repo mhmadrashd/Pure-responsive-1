@@ -13,7 +13,6 @@ header nav {
 header nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   line-height: 2.5;
   font-size: 1.5rem;
@@ -27,6 +26,17 @@ header nav ul li:hover {
 }
 header nav ul .active {
   color: black;
+}
+@media only screen and (max-width: 960px) {
+  header nav ul {
+    font-size: 17px;
+    gap: 30px !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  header nav ul {
+    display: none;
+  }
 }
 
 /* End navbar style */
